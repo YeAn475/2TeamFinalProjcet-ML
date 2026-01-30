@@ -2,3 +2,8 @@
 fastapi
 uvicorn[standard]
 pydantic
+
+pandas
+sqlalchemy
+pymysql
+python-dotenv
