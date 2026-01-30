@@ -43,3 +43,33 @@ Thumbs.db
 
 # FastAPI
 *.log
+
+# Python / Virtual Environment / IDE / OS ... (생략)
+__pycache__/
+venv/
+.vscode/
+.DS_Store
+
+# --- 데이터 및 모델 관련 (추가된 부분) ---
+# 분석 데이터셋 폴더
+dataset/
+# 학습된 모델 저장 폴더 (스크린샷의 'model' 폴더)
+model/
+# 분석 결과 리포트 폴더
+reports/
+# CatBoost 학습 로그 및 정보 폴더
+catboost_info/
+
+# --- 환경 변수 및 설정 ---
+.env
+.env.local
+
+# --- 대용량 파일 및 텍스트 데이터 ---
+*.csv
+*.xlsx
+*.txt
+# 단, requirements.txt는 제외하고 싶다면 아래 주석을 활용하세요.
+# !requirements.txt
+
+# --- 로그 파일 ---
+*.log

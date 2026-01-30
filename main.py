@@ -1,8 +1,19 @@
-# FastAPI 설정 메인
+import uvicorn
 from fastapi import FastAPI
+from app.routers.analysis import router as analysis_router
 
-app = FastAPI()
+app = FastAPI(
+    title="PMS 분석 서버",
+    description="Spring Boot와 통신하여 데이터를 분석하는 FastAPI 서버입니다.",
+    version="1.0.0"
+)
+
+# 라우터 등록
+app.include_router(analysis_router)
 
 @app.get("/")
-def read_root():
-    return {"message": "FastAPI 애플리케이션이 실행 중입니다"}
+def root():
+    return {"message": "FastAPI Server is Running"}
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
