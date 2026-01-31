@@ -1,6 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from app.routers.analysis import router as analysis_router
+from app.routers.delete import router as delete_router
 
 app = FastAPI(
     title="PMS 분석 서버",
@@ -10,6 +11,7 @@ app = FastAPI(
 
 # 라우터 등록
 app.include_router(analysis_router)
+app.include_router(delete_router)
 
 @app.get("/")
 def root():
