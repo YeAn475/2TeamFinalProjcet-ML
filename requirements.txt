@@ -1,9 +1,14 @@
-# Python 패키지 의존성 파일
+# 프레임워크 및 서버
 fastapi
 uvicorn[standard]
 pydantic
 
-pandas
+# 데이터베이스 관련 (필수!)
 sqlalchemy
 pymysql
+cryptography
 python-dotenv
+
+# 데이터 분석
+pandas
+numpy
